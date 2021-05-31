@@ -41,7 +41,7 @@ production stylesheet in assets/built/screen.css
     --color-lightgrey: #c5d2d9;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
-
+    --color-brand: #EEEEEE;
     /*
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand
@@ -52,8 +52,8 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, Times, serif;
+    --font-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: "Playfair Display", Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
 
 }
@@ -91,8 +91,8 @@ production stylesheet in assets/built/screen.css
 
 .site-header {
     position: relative;
-    color: #fff;
-    background: var(--ghost-accent-color);
+    color: #000;
+    background: var(--color-brand);
 }
 
 .site-header-cover {
@@ -123,6 +123,8 @@ production stylesheet in assets/built/screen.css
     z-index: 10;
     margin: 0 0 0.15em;
     padding: 0;
+    font-family: "Playfair Display";
+    letter-spacing: -0.05em;
 }
 
 .site-logo {
@@ -157,8 +159,8 @@ production stylesheet in assets/built/screen.css
     padding: 18vmin 4vmin;
     font-size: 2.5rem;
     font-weight: 400;
-    color: #fff;
-    background: var(--ghost-accent-color);
+    color: #000;
+    background: var(--color-brand);
 }
 
 
@@ -170,8 +172,8 @@ production stylesheet in assets/built/screen.css
     padding: 1vmin 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
-    color: #fff;
-    background: var(--ghost-accent-color);
+    color: #000;
+    background: var(--color-brand);
 }
 
 .gh-head a {
@@ -205,7 +207,9 @@ production stylesheet in assets/built/screen.css
     font-weight: 700;
     font-size: 2rem;
     line-height: 1.2em;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.05em;
+    color: #000;
+    font-family: "Playfair Display";
 }
 
 .gh-head-logo img {
@@ -290,7 +294,7 @@ production stylesheet in assets/built/screen.css
 .gh-social svg {
     height: 22px;
     width: 22px;
-    fill: #fff;
+    fill: #000;
 }
 
 .gh-social-facebook svg {
@@ -306,7 +310,7 @@ a.gh-head-button {
     letter-spacing: -0.015em;
     font-size: 1.5rem;
     line-height: 1em;
-    background: #fff;
+    background: #eee;
     border-radius: 30px;
 }
 
@@ -1668,30 +1672,30 @@ Ghost editor. */
     position: relative;
     margin: 40px 0 0 0;
     padding: 40px 4vmin 140px;
-    color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    color: #000;
+    background: var(--color-brand);
 }
 
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto 1fr auto;
-    color: rgba(255,255,255,0.7);
+    color: rgba(0,0,0,0.7);
     font-size: 1.3rem;
 }
 
 .site-footer .copyright a {
-    color: #fff;
+    color: #000;
     letter-spacing: -0.015em;
     font-weight: 500;
 }
 
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(0,0,0,0.7);
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(0,0,0,1);
     text-decoration: none;
 }
 
