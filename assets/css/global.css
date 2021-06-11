@@ -125,6 +125,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    color: #000;
 }
 a {
     background-color: transparent;
@@ -420,7 +421,7 @@ h6 {
 
 h1 {
     margin: 0 0 0.5em 0;
-    font-size: 4.8rem;
+    font-size: 6rem;
     font-weight: 700;
     letter-spacing: -0.015em;
 }
@@ -464,5 +465,5 @@ h5 {
 
 h6 {
     margin: 1.5em 0 0.5em 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }

@@ -53,7 +53,7 @@ production stylesheet in assets/built/screen.css
 
     /* Fonts */
     --font-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: "Playfair Display", Georgia, Times, serif;
+    --font-serif: -apple-system-ui-serif, ui-serif, Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
 
 }
@@ -115,7 +115,7 @@ production stylesheet in assets/built/screen.css
     align-items: center;
     padding: 6vw 3vw;
     min-height: 200px;
-    max-height: 340px;
+    max-height: 500px;
     text-align: center;
 }
 
@@ -137,6 +137,7 @@ production stylesheet in assets/built/screen.css
     margin: 0 auto;
     line-height: 1.2em;
     opacity: 0.8;
+    font-family: "Playfair Display";
 }
 
 @media (max-width: 600px) {
@@ -594,6 +595,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 .post-card-title {
@@ -795,8 +797,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* ---------------------------------------------------------- */
 
 .article {
-    padding: 8vmin 0;
+    padding: 8vmin 0 0 0;
     word-break: break-word;
+    background: var(--color-brand);
 }
 
 .article-header {
@@ -822,6 +825,8 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .article-title {
     color: color-mod(var(--color-darkgrey) l(-5%));
+    font-family: "Playfair Display";
+    letter-spacing: -0.05em;
 }
 
 .article-excerpt {
@@ -910,6 +915,10 @@ headings, text, images and lists. We deal with cards lower down. */
 .gh-content > [id] {
     margin: 0;
     color: var(--color-darkgrey);
+}
+
+h6 {
+    color: rgba(0,0,0,0.5);
 }
 
 /* Add back a top margin to all headings, unless a heading
@@ -1400,9 +1409,9 @@ Ghost editor. */
 .footer-cta {
     position: relative;
     padding: 9vmin 4vmin 10vmin;
-    color: #fff;
+    color: #000;
     text-align: center;
-    background: var(--color-darkgrey);
+    background: var(--color-brand);
 }
 
 /* Increases the default h2 size by 15%, for small and large screens */
@@ -1448,8 +1457,8 @@ Ghost editor. */
     width: 100%;
     padding: 4vmin;
     margin: 0 auto -40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--color-brand);
 }
 
 .read-more {
@@ -1459,16 +1468,16 @@ Ghost editor. */
 }
 
 .read-more .post-card-title {
-    color: #fff;
+    color: #000;
     opacity: 0.8;
 }
 
 .read-more .post-card-excerpt {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .read-more .post-card-byline-content a {
-    color: #fff;
+    color: #000;
 }
 
 
@@ -1742,7 +1751,7 @@ Ghost editor. */
     }
     .site-footer .copyright,
     .site-footer .copyright a {
-        color: #fff;
+        color: #000;
         font-size: 1.5rem;
     }
 }
@@ -1973,3 +1982,18 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
+
+/******** Custom *********/
+.gh-post-upgrade-cta small {
+    color: #fff !important;
+}
+
+section.gh-content {
+    background: #fafafa;
+    padding: 48px 0px;
+}
+
+.site-header-wrapper {
+    display: inline-block;
+    text-align: left;
+}
