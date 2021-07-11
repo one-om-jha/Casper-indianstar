@@ -42,11 +42,8 @@
                 {{navigation}}
             </div>
             <div class="gh-head-actions">
-                <form>
-                    <input id="search-field" />
-                    <input type="submit" value="search">
-                </form>
                 <div class="gh-social">
+                    <a class="social-link" href="#searchinghost-easy"><svg style="fill:#222" width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.875,493.792L353.089,338.005c32.358-35.927,52.245-83.296,52.245-135.339C405.333,90.917,314.417,0,202.667,0 S0,90.917,0,202.667s90.917,202.667,202.667,202.667c52.043,0,99.411-19.887,135.339-52.245l155.786,155.786 c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125C513.042,504.708,513.042,497.958,508.875,493.792z M202.667,384c-99.979,0-181.333-81.344-181.333-181.333S102.688,21.333,202.667,21.333S384,102.677,384,202.667 S302.646,384,202.667,384z"/></svg></a>
                     {{#if @site.facebook}}
                         <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
@@ -105,7 +102,12 @@ $(document).ready(function () {
     $(".gh-content").fitVids();
 });
 </script>
-<script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
+<script src="https://cdn.jsdelivr.net/gh/gmfmi/searchinghost-easy@latest/dist/searchinghost-easy-basic.js"></script>
+<script>
+    new SearchinGhostEasy({
+        contentApiKey: 'e04fb738b57e059883b73b8000'
+    });
+</script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}

@@ -2000,3 +2000,21 @@ section.gh-content {
     display: inline-block;
     text-align: left;
 }
+
+/*** Search Overlay ***/
+.sge-container form {
+    background-color: #fafafa !important;
+    border-color: #eee !important;
+}
+
+.sge-input {
+    font-weight: 400 !important;
+} 
+
+#sge-close {
+    background-color: #fafafa !important;
+}
+
+.sge-results-item {
+    background-color: #fafafa !important;
+}
