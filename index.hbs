@@ -30,26 +30,27 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <div class="inner posts">
-       
-        <div class="post-feed featured-feed"> 
-        <h6>FEATURED</h6>
+
+    <div class="outer-posts">
+        <div class="featured-wrapper">
+        <h4>★  Featured Posts</h4>
+        <div class="featured-feed"> 
             {{#get "posts" filter="featured:true" limit="4" as |featured_posts|}}
                 {{#foreach featured_posts}}
+                    {{> "featured-card"}}
+                    {{/foreach}}
+            {{/get}}
+        </div>
+        </div>
+    </div>
+
+    <div class="inner posts">
+        <div class="post-feed">
+            {{#get "posts" filter="featured:false" as |posts|}}
+                {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
             {{/get}}
-        </div>
-
-        <hr>
-
-        <div class="post-feed">
-            {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
         </div>
 
     </div>
