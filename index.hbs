@@ -39,7 +39,7 @@
 
         <div class="inner posts">
             <div class="post-feed{{#match @custom.feed_layout " List"}} list{{/match}}">
-                {{#get "posts" limit="all"}}
+                {{#get "posts" filter="featured:false" limit="all"}}
                     {{#foreach posts}}
                         {{> "post-card"}}
                     {{/foreach}}
